@@ -13,3 +13,4 @@ public interface IBusinessService {
 
 	List<Business> findListByTypeId(Integer typeId);
 }
+dsfgsdfsdfsdf
