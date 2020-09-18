@@ -13,4 +13,3 @@ public interface IBusinessService {
 
 	List<Business> findListByTypeId(Integer typeId);
 }
-branches-master
