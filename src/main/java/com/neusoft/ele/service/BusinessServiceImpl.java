@@ -5,6 +5,7 @@ package com.neusoft.ele.service;
 
 import java.util.List;
 
+import com.neusoft.ele.entity.Food;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,6 +25,16 @@ public class BusinessServiceImpl implements IBusinessService {
 	@Override
 	public List<Business> findListByTypeId(Integer typeId) {
 		return businessMapper.findListByTypeId(typeId);
+	}
+
+	@Override
+	public Business selectById(Integer id) {
+		return null;
+	}
+
+	@Override
+	public List<Food> selectFoodsByBusiId(Integer busiId) {
+		return null;
 	}
 
 }

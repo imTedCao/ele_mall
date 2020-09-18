@@ -17,7 +17,7 @@
 			
 			<!-- 商家列表部分 -->
 			<ul class="business">
-				<li onclick="location.href='businessInfo.html'" th:each="busi : ${data}">
+				<li th:onclick="@{location.href='../info/} + ${busi.businessId} + @{'}" th:each="busi : ${data}">
 					<div class="business-img">
 						<img th:src="${busi.businessImg}">
 						<div class="business-img-quantity">3</div>

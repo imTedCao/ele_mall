@@ -5,6 +5,8 @@ package com.neusoft.ele.mapper;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Select;
+
 import com.neusoft.ele.entity.Business;
 
 /**
@@ -15,4 +17,7 @@ import com.neusoft.ele.entity.Business;
 public interface BusinessMapper {
 
 	List<Business> findListByTypeId(Integer typeId);
+
+	@Select("SELECT * FROM business WHERE businessId=#{id}")
+	Business selectById(Integer id);
 }
