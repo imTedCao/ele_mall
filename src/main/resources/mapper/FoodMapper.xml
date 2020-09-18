@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.neusoft.ele.mapper.FoodMapper">
+
+
+    <select id="findByBusinessId" resultType="Food" parameterType="int">
+    	SELECT * FROM food WHERE businessId = #{busiId}
+    </select>
+</mapper>
