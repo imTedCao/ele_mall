@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<link href="../../framework/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+		<link href="../../framework/reset.css" rel="stylesheet">
+		<link href="../../css/businessList.css" rel="stylesheet">
+		<title>饿了么 商家列表</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<!-- header部分 -->
+			<header>
+				<p>商家列表</p>
+			</header>
+			
+			<!-- 商家列表部分 -->
+			<ul class="business">
+				<li onclick="location.href='businessInfo.html'" th:each="busi : ${data}">
+					<div class="business-img">
+						<img th:src="${busi.businessImg}">
+						<div class="business-img-quantity">3</div>
+					</div>
+					<div class="business-info">
+						<h3>[[${busi.businessName}]]</h3>
+						<p>&#165; [[${busi.starPrice}]]起送 | &#165; [[${busi.deliveryPrice}]]配送</p>
+						<p>[[${busi.businessExplain}]]</p>
+					</div>
+				</li>
+			</ul>
+			
+			<!-- 底部菜单部分 -->
+			<ul class="footer">
+				<li onclick="location.href='index.html'">
+					<i class="fa fa-home"></i>
+					<p>首页</p>
+				</li>
+				<li>
+					<i class="fa fa-compass"></i>
+					<p>发现</p>
+				</li>
+				<li onclick="location.href='orderList.html'">
+					<i class="fa fa-file-text-o"></i>
+					<p>订单</p>
+				</li>
+				<li>
+					<i class="fa fa-user-o"></i>
+					<p>我的</p>
+				</li>
+			</ul>
+			
+		</div>
+	</body>
+</html>
